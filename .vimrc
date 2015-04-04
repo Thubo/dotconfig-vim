@@ -325,7 +325,10 @@ endfunction
 " ---------------------------------------------------------------------------- "
 
 " ------------------------------ Keybindings -------------------------------- "
-
+" Make j and k move down/up through every line even if it is wrapped
+" Hint: Use `gq` to format lines to fit 80 characters
+nmap j gj
+nmap k gk
 " Map escape on ;; - Two semicolons are easy to type.
 imap ;; <Esc>
 " Insert new line above current line
