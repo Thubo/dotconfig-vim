@@ -13,8 +13,11 @@
 "  - curl, wget
 "
 " ---------------------------------------------------------------------------- "
+" ---------------------------- First things first ---------------------------- "
 " put this line first in ~/.vimrc
 set nocompatible | filetype indent plugin on | syn on
+" Change the <leader> key to more German-keyboard-friendly key
+let mapleader=","
 
 " ------------------------------- VAM setup ---------------------------------- "
 " Makes VAM connect to github via https:// and not via git://
@@ -81,13 +84,17 @@ call add(scripts, {'name': 'github:tpope/vim-fugitive'})
 call add(scripts, {'name': 'github:mileszs/ack.vim'})
 " Ag: The silver search - a even faster grep
 call add(scripts, {'name': 'github:rking/ag.vim'})
+" Toggle between relative and absolute numbers
+call add(scripts, {'name': 'github:jeffkreeftmeijer/vim-numbertoggle'})
 
 " Replaced because there are better alternatives
 " call add(scripts, {'name': 'github:Lokaltog/vim-powerline'}) " Replaced by vim-airline
 " call add(scripts, {'name': 'github:vim-scripts/multisearch.vim'}) " Replaced by Mark--Karkat
 
 " Not yet tested
+" Optical help for intentation
 " call add(scripts, {'name': 'github:nathanaelkane/vim-indent-guides'})
+" Powerful commenter plugin
 " call add(scripts, {'name': 'github:scrooloose/nerdcommenter'})
 
 " Disabled on purpose - not needed atm
@@ -97,16 +104,23 @@ call add(scripts, {'name': 'github:rking/ag.vim'})
 " call add(scripts, {'name': 'github:ludovicchabant/vim-lawrencium'})
 " Open files with ease
 " call add(scripts, {'name': 'github:kien/ctrlp.vim'})
+" Save snippets
 " call add(scripts, {'name': 'snipmate'})
+" Optical helper for CTags
 " call add(scripts, {'name': 'github:majutsushi/tagbar'})
-" call add(scripts, {'name': 'github:jeffkreeftmeijer/vim-numbertoggle'})
+" Align stuff
 " call add(scripts, {'name': 'github:junegunn/vim-easy-align'})
+" Omnicomplete but for C++
 " call add(scripts, {'name': 'github:vim-scripts/OmniCppComplete'})
+" Review patch files direcly in vim
 " call add(scripts, {'name': 'github:junkblocker/patchreview-vim'})
 silent call vam#Scripts(scripts, {'tag_regex': '.*'})
 " ---------------------------------------------------------------------------- "
 
 " -------------------------------- Plugin Settings --------------------------- "
+" Number toggle
+let g:NumberToggleTrigger="<F4>"
+
 " Open Gundo
 nnoremap <F5> :GundoToggle<CR>
 
@@ -153,8 +167,6 @@ map <Leader>k <Plug>(easymotion-k)
 "  MOST OF THIS IS NOT IN USE!
 " Language tool
 "let g:languagetool_jar='/opt/LanguageTool-2.4.1/languagetool-commandline.jar'
-" Number toggle
-"let g:NumberToggleTrigger="<F5>"
 
 " Easy align
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
@@ -212,7 +224,7 @@ map <Leader>k <Plug>(easymotion-k)
 
 " ------------------------------- General Settings --------------------------- "
 " Use the old regex engine, the new one seems to have trouble with ruby files
-set regexpengine=1
+" set regexpengine=1
 " Folder for backups
 set backupdir=~/.vimbackup
 if !isdirectory($HOME.'/.vimbackup')
