@@ -77,6 +77,10 @@ call add(scripts, {'name': 'github:altercation/vim-colors-solarized'})
 call add(scripts, {'name': 'github:Raimondi/delimitMate'})
 " Vim git warpper
 call add(scripts, {'name': 'github:tpope/vim-fugitive'})
+" Ack - a faster grep
+call add(scripts, {'name': 'github:mileszs/ack.vim'})
+" Ag: The silver search - a even faster grep
+call add(scripts, {'name': 'github:rking/ag.vim'})
 
 " Replaced because there are better alternatives
 " call add(scripts, {'name': 'github:Lokaltog/vim-powerline'}) " Replaced by vim-airline
