@@ -86,6 +86,15 @@ call add(scripts, {'name': 'github:mileszs/ack.vim'})
 call add(scripts, {'name': 'github:rking/ag.vim'})
 " Toggle between relative and absolute numbers
 call add(scripts, {'name': 'github:jeffkreeftmeijer/vim-numbertoggle'})
+" Snippets
+call add(scripts, {'name': 'github:garbas/vim-snipmate'})                                                                                                                                                                                                                           
+" Install a bunch of predefined snippets
+"  * Global snippets can be found in 
+"     $HOME/.vim/vim-addons/github-honza-vim-snippets/snippets/_.snippets
+"  * The availability of a snippet in a file is dependent on the enabled syntax
+"    You simpy run, set: syntax=html to enable the html syntax (and therefore the snippets)
+"  * To create your own snippets store them in $HOME/.vim/snippets (see also h: SnipMate-snippets)
+call add(scripts, {'name': 'github:honza/vim-snippets'})
 
 " Replaced because there are better alternatives
 " call add(scripts, {'name': 'github:Lokaltog/vim-powerline'}) " Replaced by vim-airline
@@ -104,8 +113,6 @@ call add(scripts, {'name': 'github:jeffkreeftmeijer/vim-numbertoggle'})
 " call add(scripts, {'name': 'github:ludovicchabant/vim-lawrencium'})
 " Open files with ease
 " call add(scripts, {'name': 'github:kien/ctrlp.vim'})
-" Save snippets
-" call add(scripts, {'name': 'snipmate'})
 " Optical helper for CTags
 " call add(scripts, {'name': 'github:majutsushi/tagbar'})
 " Align stuff
@@ -163,6 +170,9 @@ let g:EasyMotion_smartcase = 1
 " JK motions: Line motions
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+
+" Snipmate
+let g:snips_author = "Matthias Thubauville"
 
 "  MOST OF THIS IS NOT IN USE!
 " Language tool
