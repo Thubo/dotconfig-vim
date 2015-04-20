@@ -87,9 +87,9 @@ call add(scripts, {'name': 'github:rking/ag.vim'})
 " Toggle between relative and absolute numbers
 call add(scripts, {'name': 'github:jeffkreeftmeijer/vim-numbertoggle'})
 " Snippets
-call add(scripts, {'name': 'github:garbas/vim-snipmate'})                                                                                                                                                                                                                           
+call add(scripts, {'name': 'github:garbas/vim-snipmate'})
 " Install a bunch of predefined snippets
-"  * Global snippets can be found in 
+"  * Global snippets can be found in
 "     $HOME/.vim/vim-addons/github-honza-vim-snippets/snippets/_.snippets
 "  * The availability of a snippet in a file is dependent on the enabled syntax
 "    You simpy run, set: syntax=html to enable the html syntax (and therefore the snippets)
