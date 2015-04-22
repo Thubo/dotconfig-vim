@@ -85,7 +85,7 @@ call add(scripts, {'name': 'github:mileszs/ack.vim'})
 " Ag: The silver search - a even faster grep
 call add(scripts, {'name': 'github:rking/ag.vim'})
 " Toggle between relative and absolute numbers
-call add(scripts, {'name': 'github:jeffkreeftmeijer/vim-numbertoggle'})
+" call add(scripts, {'name': 'github:jeffkreeftmeijer/vim-numbertoggle'})
 " Snippets
 call add(scripts, {'name': 'github:garbas/vim-snipmate'})
 " Install a bunch of predefined snippets
