@@ -98,6 +98,11 @@ call add(scripts, {'name': 'github:honza/vim-snippets'})
 " Optical help for intentation
 " The default mapping for toggling indent guides is <Leader>ig
 call add(scripts, {'name': 'github:nathanaelkane/vim-indent-guides'})
+" Buffer explorer
+" The default mapping for toggling buffer explorer is <leader>bt
+" open in vertical split: <leader>bv
+" open in horizontal split: <leader>bs
+call add(scripts, {'name': 'github:jlanzarotta/bufexplorer'})
 
 " Replaced because there are better alternatives
 " call add(scripts, {'name': 'github:Lokaltog/vim-powerline'}) " Replaced by vim-airline
@@ -108,8 +113,6 @@ call add(scripts, {'name': 'github:nathanaelkane/vim-indent-guides'})
 " call add(scripts, {'name': 'github:scrooloose/nerdcommenter'})
 
 " Disabled on purpose - not needed atm
-" Buffer explorer
-" call add(scripts, {'name': 'github:jlanzarotta/bufexplorer'})
 " Mercurial wrapper for vim
 " call add(scripts, {'name': 'github:ludovicchabant/vim-lawrencium'})
 " Open files with ease
