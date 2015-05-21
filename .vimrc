@@ -95,14 +95,15 @@ call add(scripts, {'name': 'github:garbas/vim-snipmate'})
 "    You simpy run, set: syntax=html to enable the html syntax (and therefore the snippets)
 "  * To create your own snippets store them in $HOME/.vim/snippets (see also h: SnipMate-snippets)
 call add(scripts, {'name': 'github:honza/vim-snippets'})
+" Optical help for intentation
+" The default mapping for toggling indent guides is <Leader>ig
+call add(scripts, {'name': 'github:nathanaelkane/vim-indent-guides'})
 
 " Replaced because there are better alternatives
 " call add(scripts, {'name': 'github:Lokaltog/vim-powerline'}) " Replaced by vim-airline
 " call add(scripts, {'name': 'github:vim-scripts/multisearch.vim'}) " Replaced by Mark--Karkat
 
 " Not yet tested
-" Optical help for intentation
-" call add(scripts, {'name': 'github:nathanaelkane/vim-indent-guides'})
 " Powerful commenter plugin
 " call add(scripts, {'name': 'github:scrooloose/nerdcommenter'})
 
@@ -151,6 +152,7 @@ nmap <F9> :sp $MYVIMRC<CR>
 let g:airline#extensions#tabline#enabled = 1
 
 " Vim indent guide
+let g:indent_guides_enable_on_vim_startup=1
 " let g:indent_guides_auto_colors = 0
 " autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
 " autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
@@ -264,6 +266,12 @@ set gdefault
 "set list
 " don't use tabs for indentation, but SPACES !!!
 set expandtab
+" use indents of 2 spaces
+set shiftwidth=2
+" an indentation every four columns
+set tabstop=2
+" let backspace delete indent
+set softtabstop=2
 " Autobackup on
 set backup
 " Disable Ex mode
@@ -309,12 +317,6 @@ set whichwrap=b,s,h,l,<,>,[,]
 set scrolloff=3
 " indent at the same level of the previous line
 set autoindent
-" use indents of 2 spaces
-set shiftwidth=2
-" an indentation every four columns
-set tabstop=2
-" let backspace delete indent
-set softtabstop=2
 " Show vim-powerline
 set laststatus=2
 " ---------------------------------------------------------------------------- "
@@ -453,6 +455,7 @@ function! ReverseBackground()
     call LightBG()
   endif
   AirlineRefresh
+  IndentGuidesEnable
   syn on
   exe "set syntax=" . Mysyn
   " echo "now syntax is "&syntax
