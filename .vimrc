@@ -283,6 +283,10 @@ nnoremap Q <nop>
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
+" Make diff ignore whitespaces
+set diffopt+=iwhite
+set diffexpr=""
+
 " ---------------------------------------------------------------------------- "
 
 " ------------------------------- Interface Settings ------------------------ "
