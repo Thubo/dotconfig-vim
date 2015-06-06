@@ -103,6 +103,13 @@ call add(scripts, {'name': 'github:nathanaelkane/vim-indent-guides'})
 " open in vertical split: <leader>bv
 " open in horizontal split: <leader>bs
 call add(scripts, {'name': 'github:jlanzarotta/bufexplorer'})
+" FileLine
+" Allows to open files at a certain line using the :<linenumeber syntax>
+call add(scripts, {'name': 'github:bogado/file-line'})
+" Bracketed Paste
+" Reconizes input which pasted via terminal and enables paste mode
+" automatically
+call add(scripts, {'name': 'github:conradirwin/vim-bracketed-paste'})
 
 " Replaced because there are better alternatives
 " call add(scripts, {'name': 'github:Lokaltog/vim-powerline'}) " Replaced by vim-airline
@@ -125,6 +132,8 @@ call add(scripts, {'name': 'github:jlanzarotta/bufexplorer'})
 " call add(scripts, {'name': 'github:vim-scripts/OmniCppComplete'})
 " Review patch files direcly in vim
 " call add(scripts, {'name': 'github:junkblocker/patchreview-vim'})
+
+" Install the plugins
 silent call vam#Scripts(scripts, {'tag_regex': '.*'})
 " ---------------------------------------------------------------------------- "
 
