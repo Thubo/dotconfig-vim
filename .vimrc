@@ -110,6 +110,8 @@ call add(scripts, {'name': 'github:bogado/file-line'})
 " Reconizes input which pasted via terminal and enables paste mode
 " automatically
 call add(scripts, {'name': 'github:conradirwin/vim-bracketed-paste'})
+" Puppet
+call add(scripts, {'name': 'github:rodjek/vim-puppet.git'})
 
 " Replaced because there are better alternatives
 " call add(scripts, {'name': 'github:Lokaltog/vim-powerline'}) " Replaced by vim-airline
