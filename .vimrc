@@ -68,8 +68,6 @@ call add(scripts, {'name': 'github:tomtom/tcomment_vim'})
 call add(scripts, {'name': 'github:AndrewRadev/linediff.vim'})
 " Align stuff
 call add(scripts, {'name': 'github:vim-scripts/Align'})
-" File explorer
-call add(scripts, {'name': 'github:scrooloose/nerdtree'})
 " Easy motion, invoced by using 's'
 call add(scripts, {'name': 'github:Lokaltog/vim-easymotion'})
 " Graphical undo
@@ -112,10 +110,13 @@ call add(scripts, {'name': 'github:bogado/file-line'})
 call add(scripts, {'name': 'github:conradirwin/vim-bracketed-paste'})
 " Puppet
 call add(scripts, {'name': 'github:rodjek/vim-puppet.git'})
+" Vinear
+call add(scripts, {'name': 'github:tpope/vim-vinegar.git'})
 
 " Replaced because there are better alternatives
 " call add(scripts, {'name': 'github:Lokaltog/vim-powerline'}) " Replaced by vim-airline
 " call add(scripts, {'name': 'github:vim-scripts/multisearch.vim'}) " Replaced by Mark--Karkat
+" call add(scripts, {'name': 'github:scrooloose/nerdtree'}) " Replaced by vinegar
 
 " Not yet tested
 " Powerful commenter plugin
@@ -147,7 +148,7 @@ let g:NumberToggleTrigger="<F4>"
 nnoremap <F5> :GundoToggle<CR>
 
 " Nerdtree
-nmap <F6> :NERDTreeToggle<CR>
+" nmap <F6> :NERDTreeToggle<CR>
 
 " Make split in fugitive always veritcal
 set diffopt+=vertical
