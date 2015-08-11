@@ -83,7 +83,7 @@ call add(scripts, {'name': 'github:mileszs/ack.vim'})
 " Ag: The silver search - a even faster grep
 call add(scripts, {'name': 'github:rking/ag.vim'})
 " Toggle between relative and absolute numbers
-" call add(scripts, {'name': 'github:jeffkreeftmeijer/vim-numbertoggle'})
+call add(scripts, {'name': 'github:jeffkreeftmeijer/vim-numbertoggle'})
 " Snippets
 call add(scripts, {'name': 'github:garbas/vim-snipmate'})
 " Install a bunch of predefined snippets
@@ -112,6 +112,10 @@ call add(scripts, {'name': 'github:conradirwin/vim-bracketed-paste'})
 call add(scripts, {'name': 'github:rodjek/vim-puppet.git'})
 " Vinear
 call add(scripts, {'name': 'github:tpope/vim-vinegar.git'})
+" LineJuggler
+call add(scripts, {'name': 'github:vim-scripts/LineJuggler.git'})
+call add(scripts, {'name': 'github:vim-scripts/ingo-library.git'})
+call add(scripts, {'name': 'github:vim-scripts/visualrepeat.git'})
 
 " Replaced because there are better alternatives
 " call add(scripts, {'name': 'github:Lokaltog/vim-powerline'}) " Replaced by vim-airline
