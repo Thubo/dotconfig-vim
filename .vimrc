@@ -72,8 +72,9 @@ call add(scripts, {'name': 'github:vim-scripts/Align'})
 call add(scripts, {'name': 'github:Lokaltog/vim-easymotion'})
 " Graphical undo
 call add(scripts, {'name': 'github:vim-scripts/Gundo'})
-" Solarized Colors
+" Themes
 call add(scripts, {'name': 'github:altercation/vim-colors-solarized'})
+call add(scripts, {'name': 'github:morhetz/gruvbox'})
 " Close brackets, quotes, etc
 call add(scripts, {'name': 'github:Raimondi/delimitMate'})
 " Vim git warpper
@@ -296,9 +297,9 @@ set backup
 " Disable Ex mode
 nnoremap Q <nop>
 " Source the vimrc file after saving it
-if has("autocmd")
-  autocmd bufwritepost .vimrc source $MYVIMRC
-endif
+" if has("autocmd")
+"   autocmd bufwritepost .vimrc source $MYVIMRC
+" endif
 " Make diff ignore whitespaces
 set diffopt+=iwhite
 set diffexpr=""
@@ -453,20 +454,35 @@ function! SetupSolarized()
   hi CursorColumn term=bold cterm=bold ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
 endfunction
 
+" Setup gruvbox
+function! SetupGruvbox()
+  " Set coloring to 256
+  set t_Co=256
+  " Use the solarized color scheme
+  colorscheme gruvbox
+  " highlight current line
+  set cursorline
+  hi CursorLine term=bold cterm=bold ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
+  hi CursorColumn term=bold cterm=bold ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
+endfunction
+
 " Setup light background
 function! LightBG()
-  call SetupSolarized()
+  " call SetupSolarized()
+  call SetupGruvbox()
   set bg=light
   hi Normal guibg=white guifg=black
-  let g:airline_theme='solarized'
+  " let g:airline_theme='solarized'
+  let g:airline_theme='gruvbox'
 endfunction
 
 " Setup dark background
 function! DarkBG()
-  call SetupSolarized()
+  " call SetupSolarized()
+  call SetupGruvbox()
   set bg=dark
   hi Normal guibg=black guifg=white
-  let g:airline_theme='dark'
+  let g:airline_theme='gruvbox'
 endfunction
 
 " Toggle Background Color
