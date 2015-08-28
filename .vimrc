@@ -79,10 +79,6 @@ call add(scripts, {'name': 'github:morhetz/gruvbox'})
 call add(scripts, {'name': 'github:Raimondi/delimitMate'})
 " Vim git warpper
 call add(scripts, {'name': 'github:tpope/vim-fugitive'})
-" Ack - a faster grep
-call add(scripts, {'name': 'github:mileszs/ack.vim'})
-" Ag: The silver search - a even faster grep
-call add(scripts, {'name': 'github:rking/ag.vim'})
 " Toggle between relative and absolute numbers
 call add(scripts, {'name': 'github:jeffkreeftmeijer/vim-numbertoggle'})
 " Snippets
@@ -128,6 +124,10 @@ call add(scripts, {'name': 'github:vim-scripts/visualrepeat.git'})
 " call add(scripts, {'name': 'github:scrooloose/nerdcommenter'})
 
 " Disabled on purpose - not needed atm
+" Ag: The silver search - a even faster grep
+" call add(scripts, {'name': 'github:rking/ag.vim'})
+" Ack - a faster grep
+" call add(scripts, {'name': 'github:mileszs/ack.vim'})
 " Mercurial wrapper for vim
 " call add(scripts, {'name': 'github:ludovicchabant/vim-lawrencium'})
 " Open files with ease
