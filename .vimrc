@@ -117,6 +117,8 @@ call add(scripts, {'name': 'github:tpope/vim-vinegar.git'})
 call add(scripts, {'name': 'github:vim-scripts/LineJuggler.git'})
 call add(scripts, {'name': 'github:vim-scripts/ingo-library.git'})
 call add(scripts, {'name': 'github:vim-scripts/visualrepeat.git'})
+" Org Mode
+call add(scripts, {'name': 'github:jceb/vim-orgmode'})
 
 " Replaced because there are better alternatives
 " call add(scripts, {'name': 'github:Lokaltog/vim-powerline'}) " Replaced by vim-airline
