@@ -379,6 +379,8 @@ endfunction
 " ---------------------------------------------------------------------------- "
 
 " ------------------------------ Keybindings -------------------------------- "
+" Allow saving of files as sudo with :w!! when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
 " Make j and k move down/up through every line even if it is wrapped
 " Hint: Use `gq` to format lines to fit 80 characters
 nmap j gj
