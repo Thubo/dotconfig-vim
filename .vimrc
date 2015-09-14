@@ -100,7 +100,7 @@ call add(scripts, {'name': 'github:nathanaelkane/vim-indent-guides'})
 call add(scripts, {'name': 'github:jlanzarotta/bufexplorer'})
 " FileLine
 " Allows to open files at a certain line using the :<linenumeber syntax>
-call add(scripts, {'name': 'github:bogado/file-line'})
+" call add(scripts, {'name': 'github:bogado/file-line'})
 " Bracketed Paste
 " Reconizes input which pasted via terminal and enables paste mode
 " automatically
