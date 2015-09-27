@@ -55,33 +55,47 @@ silent call SetupVAM()
 " Activating Plugins
 let scripts = []
 " Pluggin to toggle marks using 'm' and a mark letter
+" https://github.com/kshenoy/vim-signature
 call add(scripts, {'name': 'github:kshenoy/vim-signature'})
 " Allows to highlight multiple words simultaneously
+" https://github.com/vim-scripts/Mark--Karkat
 call add(scripts, {'name': 'github:vim-scripts/Mark--Karkat'})
 " Tab completion for everything
+" https://github.com/ervandew/supertab
 call add(scripts, {'name': 'github:ervandew/supertab.git'})
 " Lightweight status line
+" https://github.com/bling/vim-airline
 call add(scripts, {'name': 'github:bling/vim-airline'})
 " Quickly comment and uncomment lines
+" https://github.com/tomtom/tcomment_vim
 call add(scripts, {'name': 'github:tomtom/tcomment_vim'})
 " Use :Linediff to diff lines marked before
+" https://github.com/AndrewRadev/linediff.vim
 call add(scripts, {'name': 'github:AndrewRadev/linediff.vim'})
 " Align stuff
+" https://github.com/vim-scripts/Align
 call add(scripts, {'name': 'github:vim-scripts/Align'})
 " Easy motion, invoced by using 's'
+" https://github.com/easymotion/vim-easymotion
 call add(scripts, {'name': 'github:Lokaltog/vim-easymotion'})
 " Graphical undo
+" https://github.com/vim-scripts/Gundo
 call add(scripts, {'name': 'github:vim-scripts/Gundo'})
 " Themes
 call add(scripts, {'name': 'github:altercation/vim-colors-solarized'})
 call add(scripts, {'name': 'github:morhetz/gruvbox'})
 " Close brackets, quotes, etc
+" https://github.com/Raimondi/delimitMate
 call add(scripts, {'name': 'github:Raimondi/delimitMate'})
 " Vim git warpper
+" https://github.com/tpope/vim-fugitive
+" http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/
 call add(scripts, {'name': 'github:tpope/vim-fugitive'})
 " Toggle between relative and absolute numbers
+" https://github.com/jeffkreeftmeijer/vim-numbertoggle
 call add(scripts, {'name': 'github:jeffkreeftmeijer/vim-numbertoggle'})
 " Snippets
+" https://github.com/garbas/vim-snipmate
 call add(scripts, {'name': 'github:garbas/vim-snipmate'})
 " Install a bunch of predefined snippets
 "  * Global snippets can be found in
@@ -91,35 +105,42 @@ call add(scripts, {'name': 'github:garbas/vim-snipmate'})
 "  * To create your own snippets store them in $HOME/.vim/snippets (see also h: SnipMate-snippets)
 call add(scripts, {'name': 'github:honza/vim-snippets'})
 " Optical help for intentation
+" https://github.com/nathanaelkane/vim-indent-guides
 " The default mapping for toggling indent guides is <Leader>ig
 call add(scripts, {'name': 'github:nathanaelkane/vim-indent-guides'})
 " Buffer explorer
+" https://github.com/jlanzarotta/bufexplorer
 " The default mapping for toggling buffer explorer is <leader>bt
 " open in vertical split: <leader>bv
 " open in horizontal split: <leader>bs
 call add(scripts, {'name': 'github:jlanzarotta/bufexplorer'})
-" FileLine
-" Allows to open files at a certain line using the :<linenumeber syntax>
-" call add(scripts, {'name': 'github:bogado/file-line'})
 " Bracketed Paste
+" https://github.com/ConradIrwin/vim-bracketed-paste
 " Reconizes input which pasted via terminal and enables paste mode
 " automatically
 call add(scripts, {'name': 'github:conradirwin/vim-bracketed-paste'})
 " Puppet
+" https://github.com/rodjek/vim-puppet
 call add(scripts, {'name': 'github:rodjek/vim-puppet.git'})
 " Vinear
+" https://github.com/tpope/vim-vinegar
 call add(scripts, {'name': 'github:tpope/vim-vinegar.git'})
 " LineJuggler
+" https://github.com/vim-scripts/LineJuggler
 call add(scripts, {'name': 'github:vim-scripts/LineJuggler.git'})
 call add(scripts, {'name': 'github:vim-scripts/ingo-library.git'})
 call add(scripts, {'name': 'github:vim-scripts/visualrepeat.git'})
 " Org Mode
+" https://github.com/jceb/vim-orgmode
 call add(scripts, {'name': 'github:jceb/vim-orgmode'})
 
 " Replaced because there are better alternatives
 " call add(scripts, {'name': 'github:Lokaltog/vim-powerline'}) " Replaced by vim-airline
 " call add(scripts, {'name': 'github:vim-scripts/multisearch.vim'}) " Replaced by Mark--Karkat
 " call add(scripts, {'name': 'github:scrooloose/nerdtree'}) " Replaced by vinegar
+" FileLine: Causes errors when opening multiple files
+" Allows to open files at a certain line using the :<linenumeber syntax>
+" call add(scripts, {'name': 'github:bogado/file-line'})
 
 " Not yet tested
 " Powerful commenter plugin
