@@ -133,6 +133,9 @@ call add(scripts, {'name': 'github:vim-scripts/visualrepeat.git'})
 " Org Mode
 " https://github.com/jceb/vim-orgmode
 call add(scripts, {'name': 'github:jceb/vim-orgmode'})
+" Trailing Whitespaces
+" https://github.com/bronson/vim-trailing-whitespace
+call add(scripts, {'name': 'github:bronson/vim-trailing-whitespace'})
 
 " Replaced because there are better alternatives
 " call add(scripts, {'name': 'github:Lokaltog/vim-powerline'}) " Replaced by vim-airline
@@ -174,6 +177,10 @@ let g:NumberToggleTrigger="<F4>"
 
 " Open Gundo
 nnoremap <F5> :GundoToggle<CR>
+
+" Remove trailing whitespaces
+nmap <leader>w :FixWhitespace<CR>
+vmap <leader>w :FixWhitespace<CR>
 
 " Nerdtree
 " nmap <F6> :NERDTreeToggle<CR>
@@ -385,18 +392,6 @@ function! s:ToggleFold()
   endif
   echo 'foldmethod is now ' . &l:foldmethod
 endfunction
-
-" Toggle function to show unwanted whitespaces
-let g:tws = 0
-function! ToggleWS()
-        if g:tws
-                :match
-                let g:tws = 0
-        else
-                :match ExtraWhitespace /\s\+$/
-                let g:tws = 1
-        endif
-endfunction
 " ---------------------------------------------------------------------------- "
 
 " ------------------------------ Keybindings -------------------------------- "
@@ -435,8 +430,6 @@ nmap <C-m> :e#<CR>
 nmap <C-n> :bnext<CR>
 " previous buffer
 nmap <C-b> :bprev<CR>
-" Toggle whitespace highlight
-nmap <leader>w :call ToggleWS()<CR>
 " ...and remove them
 nmap <silent> <leader>W :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 " Toggle the folding mode between syntax and manual
