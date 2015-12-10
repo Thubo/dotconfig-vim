@@ -333,6 +333,8 @@ nnoremap Q <nop>
 " Make diff ignore whitespaces
 set diffopt+=iwhite
 set diffexpr=""
+" Equalize splits automatically when window is resized
+autocmd VimResized * wincmd =
 
 " ---------------------------------------------------------------------------- "
 
