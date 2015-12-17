@@ -452,10 +452,12 @@ nmap <leader>l :setlocal number!<CR>
 " Toggle paste mode
 nmap <leader>p :set paste!<CR>
 " Easier moving in tabs and windows
-map <C-J> <C-W>j<C-W>
-map <C-K> <C-W>k<C-W>
-map <C-L> <C-W>l<C-W>
-map <C-H> <C-W>h<C-W>
+" map <C-J> <C-W>j<C-W>
+" map <C-K> <C-W>k<C-W>
+" map <C-L> <C-W>l<C-W>
+" map <C-H> <C-W>h<C-W>
+" Next buffer
+nmap <C-L> :redraw!<CR>
 " ---------------------------------------------------------------------------- "
 
 " ------------------------------- Color Fun ---------------------------------- "
