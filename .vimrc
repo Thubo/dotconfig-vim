@@ -136,6 +136,9 @@ call add(scripts, {'name': 'github:jceb/vim-orgmode'})
 " Trailing Whitespaces
 " https://github.com/bronson/vim-trailing-whitespace
 call add(scripts, {'name': 'github:bronson/vim-trailing-whitespace'})
+" Inline Git Diff
+" https://github.com/airblade/vim-gitgutter
+call add(scripts, {'name': 'github:airblade/vim-gitgutter'})
 
 " Replaced because there are better alternatives
 " call add(scripts, {'name': 'github:Lokaltog/vim-powerline'}) " Replaced by vim-airline
@@ -172,31 +175,33 @@ silent call vam#Scripts(scripts, {'tag_regex': '.*'})
 " ---------------------------------------------------------------------------- "
 
 " -------------------------------- Plugin Settings --------------------------- "
-" Number toggle
+"  F1-F12 Keys
+"
+"  F1: Help
+"  F2: GitGutter
+let g:gitgutter_enabled = 0
+map <F2> :GitGutterToggle<CR>
+" F3:
+" F4: Number toggle
 let g:NumberToggleTrigger="<F4>"
-
-" Open Gundo
+" F5: Open Gundo
 nnoremap <F5> :GundoToggle<CR>
+" F6:
+" nmap <F6> :NERDTreeToggle<CR> " Nerdtree
+" F7: Enter BufExplorer
+nmap <F7> :BufExplorerVerticalSplit<CR>
+" Open vimrc from anywhere
+" F8:
+"nmap <F8> :TagbarToggle<CR> " Tagbar
+" F9: Edit vimrc from anywhere
+nmap <F9> :sp $MYVIMRC<CR>
 
 " Remove trailing whitespaces
 nmap <leader>w :FixWhitespace<CR>
 vmap <leader>w :FixWhitespace<CR>
 
-" Nerdtree
-" nmap <F6> :NERDTreeToggle<CR>
-
 " Make split in fugitive always veritcal
 set diffopt+=vertical
-
-" Enter BufExplorer
-nmap <F7> :BufExplorerVerticalSplit<CR>
-
-" Open vimrc from anywhere
-" nmap <leader>v :tabedit $MYVIMRC<CR>
-nmap <F9> :sp $MYVIMRC<CR>
-
-" Toggle the Tagbar
-"nmap <F8> :TagbarToggle<CR>
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
@@ -405,10 +410,6 @@ nmap j gj
 nmap k gk
 " Map escape on ;; - Two semicolons are easy to type.
 imap ;; <Esc>
-" Insert new line above current line
-nmap <F2> O<Esc>j
-" Insert new line below current line
-nmap <F3> o<Esc>k
 " Make Y act like the other capital letters
 nnoremap Y y$
 " Play back macro in q with Q
