@@ -93,7 +93,7 @@ call add(scripts, {'name': 'github:Raimondi/delimitMate'})
 call add(scripts, {'name': 'github:tpope/vim-fugitive'})
 " Toggle between relative and absolute numbers
 " https://github.com/jeffkreeftmeijer/vim-numbertoggle
-call add(scripts, {'name': 'github:jeffkreeftmeijer/vim-numbertoggle'})
+" call add(scripts, {'name': 'github:jeffkreeftmeijer/vim-numbertoggle'})
 " Snippets
 " https://github.com/garbas/vim-snipmate
 call add(scripts, {'name': 'github:garbas/vim-snipmate'})
@@ -183,7 +183,8 @@ let g:gitgutter_enabled = 0
 map <F2> :GitGutterToggle<CR>
 " F3:
 " F4: Number toggle
-let g:NumberToggleTrigger="<F4>"
+" let g:NumberToggleTrigger="<F4>"
+nnoremap <F4> :set relativenumber!<CR>
 " F5: Open Gundo
 nnoremap <F5> :GundoToggle<CR>
 " F6:
@@ -354,7 +355,7 @@ set wrapmargin=0
 " No extra spaces between rows
 set linespace=0
 " Line numbers on
-set nu
+set number
 " show matching brackets/parenthesis
 set showmatch
 " find as you type search
@@ -447,8 +448,6 @@ nmap <leader>N :set wrap!<CR>
 nmap <leader>D :set scb!<CR>
 " Toggle diff mode
 nmap <leader>d :windo set diff!<CR>
-" Toggle line numbers
-nmap <leader>l :setlocal number!<CR>
 " Toggle paste mode
 nmap <leader>p :set paste!<CR>
 " Easier moving in tabs and windows
