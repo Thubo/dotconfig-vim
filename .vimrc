@@ -446,6 +446,8 @@ nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 nmap <leader>N :set wrap!<CR>
 " Toggle Scrollbind
 nmap <leader>D :set scb!<CR>
+" Toggle line numbers
+nmap <leader>l :setlocal number!<CR>
 " Toggle diff mode
 nmap <leader>d :windo set diff!<CR>
 " Toggle paste mode
