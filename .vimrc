@@ -139,6 +139,9 @@ call add(scripts, {'name': 'github:bronson/vim-trailing-whitespace'})
 " Inline Git Diff
 " https://github.com/airblade/vim-gitgutter
 call add(scripts, {'name': 'github:airblade/vim-gitgutter'})
+" Vim Ruby
+" https://github.com/vim-ruby/vim-ruby
+call add(scripts, {'name': 'github:vim-ruby/vim-ruby'})
 
 " Replaced because there are better alternatives
 " call add(scripts, {'name': 'github:Lokaltog/vim-powerline'}) " Replaced by vim-airline
