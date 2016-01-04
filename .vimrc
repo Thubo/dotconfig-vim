@@ -142,6 +142,9 @@ call add(scripts, {'name': 'github:airblade/vim-gitgutter'})
 " Vim Ruby
 " https://github.com/vim-ruby/vim-ruby
 call add(scripts, {'name': 'github:vim-ruby/vim-ruby'})
+" Ack Vim
+" https://github.com/mileszs/ack.vim
+call add(scripts, {'name': 'github:mileszs/ack.vim'})
 
 " Replaced because there are better alternatives
 " call add(scripts, {'name': 'github:Lokaltog/vim-powerline'}) " Replaced by vim-airline
@@ -209,6 +212,11 @@ set diffopt+=vertical
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
+
+" Vim Ack
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 " Vim indent guide
 let g:indent_guides_enable_on_vim_startup=1
