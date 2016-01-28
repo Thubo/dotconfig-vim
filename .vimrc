@@ -53,6 +53,7 @@ Plug 'mileszs/ack.vim' " Ack Vim
 Plug 'nathanaelkane/vim-indent-guides' " Optical help for intentation
 " The default mapping for toggling indent guides is <Leader>ig
 Plug 'rodjek/vim-puppet' " Puppet
+Plug 'scrooloose/syntastic' " Syntax checking
 Plug 'tomtom/tcomment_vim' " Quickly comment and uncomment lines
 Plug 'tpope/vim-fugitive' " Vim git warpper, http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/
 Plug 'tpope/vim-vinegar' " Vinear
@@ -162,6 +163,16 @@ map <Leader>k <Plug>(easymotion-k)
 
 " Snipmate
 let g:snips_author = "Matthias Thubauville"
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_enable_signs=1
+let g:syntastic_quiet_messages = {'level': 'warnings'}
+let g:syntastic_auto_loc_list=1
+"To enable Just puppet-lint and disable the parser uncomment next line
+" let g:syntastic_puppet_checkers=['puppetlint']
 " ---------------------------------------------------------------------------- "
 
 " ------------------------------- General Settings --------------------------- "
