@@ -42,7 +42,7 @@ Plug 'conradirwin/vim-bracketed-paste' " Bracketed Paste
 Plug 'ervandew/supertab' | Plug 'vim-scripts/tlib' " Tab completion for everything
 Plug 'garbas/vim-snipmate' | Plug 'MarcWeber/vim-addon-mw-utils' " Snippets
 Plug 'honza/vim-snippets' " Install a bunch of predefined snippets
-Plug 'jceb/vim-orgmode' " Org Mode
+Plug 'jceb/vim-orgmode' | Plug 'tpope/vim-speeddating' | Plug 'vim-scripts/utl.vim' | Plug 'tpope/vim-repeat' " Org Mode
 Plug 'jlanzarotta/bufexplorer' " Buffer explorer
 " The default mapping for toggling buffer explorer is <leader>bt
 " open in vertical split: <leader>bv
