@@ -19,6 +19,7 @@
 set nocompatible | filetype indent plugin on | syn on
 " Change the <leader> key to more German-keyboard-friendly key
 let mapleader=","
+let maplocalleader="\\"
 
 " ------------------------------ Plug setup ---------------------------------- "
 if empty(glob('~/.vim/autoload/plug.vim'))
