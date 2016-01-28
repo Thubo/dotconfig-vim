@@ -41,6 +41,7 @@ Plug 'bronson/vim-trailing-whitespace' " Trailing Whitespaces
 Plug 'conradirwin/vim-bracketed-paste' " Bracketed Paste
 Plug 'ervandew/supertab' | Plug 'vim-scripts/tlib' " Tab completion for everything
 Plug 'garbas/vim-snipmate' | Plug 'MarcWeber/vim-addon-mw-utils' " Snippets
+Plug 'godlygeek/tabular' " Manage your alignments
 Plug 'honza/vim-snippets' " Install a bunch of predefined snippets
 Plug 'jceb/vim-orgmode' | Plug 'tpope/vim-speeddating' | Plug 'vim-scripts/utl.vim' | Plug 'tpope/vim-repeat' " Org Mode
 Plug 'jlanzarotta/bufexplorer' " Buffer explorer
@@ -52,6 +53,7 @@ Plug 'mhinz/vim-startify' " Startify
 Plug 'mileszs/ack.vim' " Ack Vim
 Plug 'nathanaelkane/vim-indent-guides' " Optical help for intentation
 " The default mapping for toggling indent guides is <Leader>ig
+Plug 'plasticboy/vim-markdown' " Markdown syntax
 Plug 'rodjek/vim-puppet' " Puppet
 Plug 'scrooloose/syntastic' " Syntax checking
 Plug 'tomtom/tcomment_vim' " Quickly comment and uncomment lines
@@ -60,11 +62,9 @@ Plug 'tpope/vim-vinegar' " Vinear
 Plug 'vim-ruby/vim-ruby' " Vim Ruby
 Plug 'vim-scripts/Align' " Align stuff
 Plug 'vim-scripts/Gundo' " Graphical undo
-Plug 'vim-scripts/LineJuggler' " LineJuggler
+Plug 'vim-scripts/LineJuggler' | Plug 'vim-scripts/ingo-library' | Plug 'vim-scripts/visualrepeat' " LineJuggler
 Plug 'vim-scripts/Mark--Karkat' " Allows to highlight multiple words simultaneously
-Plug 'vim-scripts/ingo-library' " LineJuggler
-Plug 'vim-scripts/visualrepeat' " LineJuggler
-
+Plug 'majutsushi/tagbar' " Tagbar, requires exuberant-ctags
 call plug#end()
 
 " ---------------------------------------------------------------------------- "
@@ -82,9 +82,6 @@ call plug#end()
 
 " Open files with ease
 " kien/ctrlp.vim
-
-" Optical helper for CTags
-" majutsushi/tagbar
 
 " Align stuff
 " junegunn/vim-easy-align
@@ -110,11 +107,12 @@ nnoremap <F5> :set relativenumber!<CR>
 nnoremap <F6> :GundoToggle<CR>
 " F7: Enter BufExplorer
 nmap <F7> :BufExplorerVerticalSplit<CR>
-" F8: GitGutter
-let g:gitgutter_enabled = 0
-map <F8> :GitGutterToggle<CR>
+" F8: Tagbar
+nmap <F8> :TagbarToggle<CR>
 " --
-" F9:
+" F9: GitGutter
+let g:gitgutter_enabled = 0
+map <F9> :GitGutterToggle<CR>
 " F10:
 " F11:
 " F12:
@@ -173,6 +171,11 @@ let g:syntastic_quiet_messages = {'level': 'warnings'}
 let g:syntastic_auto_loc_list=1
 "To enable Just puppet-lint and disable the parser uncomment next line
 " let g:syntastic_puppet_checkers=['puppetlint']
+
+" Tagbar
+let g:tagbar_autoclose = 1
+let g:tagbar_autofocus = 1
+
 " ---------------------------------------------------------------------------- "
 
 " ------------------------------- General Settings --------------------------- "
