@@ -126,9 +126,6 @@ vmap <leader>w :FixWhitespace<CR>
 " Make split in fugitive always veritcal
 set diffopt+=vertical
 
-" Startify
-let g:startify_bookmarks = [ {'vimrc': '~/.vimrc'}, {'bashrc': '~/.bashrc'} ]
-
 " Airline
 let g:airline#extensions#tabline#enabled = 1
 
@@ -175,6 +172,10 @@ let g:syntastic_auto_loc_list=1
 " Tagbar
 let g:tagbar_autoclose = 1
 let g:tagbar_autofocus = 1
+
+" Startify
+let g:startify_bookmarks = [ {'vimrc': '~/.vimrc'}, {'bashrc': '~/.bashrc'} ]
+autocmd User Startified nnoremap <buffer> u :PlugUpdate<cr>
 
 " ---------------------------------------------------------------------------- "
 
