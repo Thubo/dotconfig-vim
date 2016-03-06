@@ -176,6 +176,7 @@ let g:tagbar_autofocus = 1
 " Startify
 let g:startify_bookmarks = [ {'vimrc': '~/.vimrc'}, {'bashrc': '~/.bashrc'} ]
 autocmd User Startified nnoremap <buffer> u :PlugUpdate<cr>
+autocmd User Startified nnoremap <buffer> U :PlugUpgrade<cr>
 
 " ---------------------------------------------------------------------------- "
 
