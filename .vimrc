@@ -32,6 +32,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'morhetz/gruvbox'
 " Plugins
+Plug 'ekalinin/Dockerfile.vim' " Syntax Highlighting for Dockerfiles
 Plug 'AndrewRadev/linediff.vim' " Use :Linediff to diff lines marked before
 Plug 'Lokaltog/vim-easymotion' " Easy motion, invoced by using 's'
 Plug 'Raimondi/delimitMate' " Close brackets, quotes, etc
