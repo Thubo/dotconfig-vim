@@ -52,10 +52,10 @@ Plug 'jlanzarotta/bufexplorer' " Buffer explorer
 Plug 'kshenoy/vim-signature' " Pluggin to toggle marks using 'm' and a mark letter
 Plug 'mhinz/vim-startify' " Startify
 Plug 'mileszs/ack.vim' " Ack Vim
-Plug 'nathanaelkane/vim-indent-guides' " Optical help for intentation
-" The default mapping for toggling indent guides is <Leader>ig
+Plug 'nathanaelkane/vim-indent-guides' " Optical help for intentation - Default mapping for toggling is <Leader>ig
 Plug 'plasticboy/vim-markdown' " Markdown syntax
 Plug 'rodjek/vim-puppet' " Puppet
+Plug 'mattn/emmet-vim' " Essential toolkit for web-developers
 Plug 'scrooloose/syntastic' " Syntax checking
 Plug 'tomtom/tcomment_vim' " Quickly comment and uncomment lines
 Plug 'tpope/vim-fugitive' " Vim git warpper, http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/
@@ -123,6 +123,10 @@ map <F9> :GitGutterToggle<CR>
 " Remove trailing whitespaces
 nmap <leader>w :FixWhitespace<CR>
 vmap <leader>w :FixWhitespace<CR>
+
+" Enable emmet just for html/css
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
 
 " Make split in fugitive always veritcal
 set diffopt+=vertical
