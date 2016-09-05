@@ -188,6 +188,8 @@ autocmd User Startified nnoremap <buffer> U :PlugUpgrade<cr>
 " ------------------------------- General Settings --------------------------- "
 " Use the old regex engine, the new one seems to have trouble with ruby files
 " set regexpengine=1
+" Allow to switch buffers without saving them
+set hidden
 " Folder for backups
 set backupdir=~/.vimbackup
 if !isdirectory($HOME.'/.vimbackup')
