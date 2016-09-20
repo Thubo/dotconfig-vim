@@ -122,6 +122,7 @@ map <F9> :GitGutterToggle<CR>
 " -------------------------------- Plugin Settings --------------------------- "
 " Org Mode
 let g:org_agenda_files = ['~/org/*.org']
+let g:org_heading_shade_leading_stars = 0
 let g:org_todo_keywords=['TODO', 'INPROGRESS', '|', 'DONE', 'DELEGATED']
 
 " Remove trailing whitespaces
