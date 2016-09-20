@@ -120,6 +120,10 @@ map <F9> :GitGutterToggle<CR>
 " ---------------------------------------------------------------------------- "
 
 " -------------------------------- Plugin Settings --------------------------- "
+" Org Mode
+let g:org_agenda_files = ['~/org/*.org']
+let g:org_todo_keywords=['TODO', 'INPROGRESS', '|', 'DONE', 'DELEGATED']
+
 " Remove trailing whitespaces
 nmap <leader>w :FixWhitespace<CR>
 vmap <leader>w :FixWhitespace<CR>
