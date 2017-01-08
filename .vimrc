@@ -124,6 +124,7 @@ map <F9> :GitGutterToggle<CR>
 let g:org_agenda_files = ['~/org/*.org']
 let g:org_heading_shade_leading_stars = 0
 let g:org_todo_keywords=['TODO', 'INPROGRESS', '|', 'DONE', 'DELEGATED']
+let g:org_tag_column=120
 
 " Remove trailing whitespaces
 nmap <leader>w :FixWhitespace<CR>
