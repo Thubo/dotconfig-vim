@@ -46,12 +46,15 @@ Plug 'godlygeek/tabular' " Manage your alignments
 Plug 'honza/vim-snippets' " Install a bunch of predefined snippets
 Plug 'jceb/vim-orgmode' | Plug 'tpope/vim-speeddating' | Plug 'vim-scripts/utl.vim' | Plug 'tpope/vim-repeat' " Org Mode
 Plug 'jlanzarotta/bufexplorer' " Buffer explorer
+Plug 'fatih/vim-nginx' " Nginx Syntax
 " The default mapping for toggling buffer explorer is <leader>bt
 " open in vertical split: <leader>bv
 " open in horizontal split: <leader>bs
 Plug 'kshenoy/vim-signature' " Pluggin to toggle marks using 'm' and a mark letter
 Plug 'mhinz/vim-startify' " Startify
+Plug 'mustache/vim-mustache-handlebars' " Mustache and Handlebars (Kubernetes Charts)
 Plug 'mileszs/ack.vim' " Ack Vim
+Plug 'mtth/scratch.vim' " Scratchpad with gs
 Plug 'nathanaelkane/vim-indent-guides' " Optical help for intentation - Default mapping for toggling is <Leader>ig
 Plug 'plasticboy/vim-markdown' " Markdown syntax
 Plug 'rodjek/vim-puppet' " Puppet
@@ -307,8 +310,6 @@ endfunction
 " ------------------------------ Keybindings -------------------------------- "
 " Allow saving of files as sudo with :w!! when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
-" Close all with Q
-cmap Q qa
 " Make j and k move down/up through every line even if it is wrapped
 " Hint: Use `gq` to format lines to fit 80 characters
 nmap j gj
