@@ -69,6 +69,7 @@ Plug 'vim-scripts/Gundo' " Graphical undo
 Plug 'vim-scripts/LineJuggler' | Plug 'vim-scripts/ingo-library' | Plug 'vim-scripts/visualrepeat' " LineJuggler
 Plug 'vim-scripts/Mark--Karkat' " Allows to highlight multiple words simultaneously
 Plug 'majutsushi/tagbar' " Tagbar, requires exuberant-ctags
+Plug 'skywind3000/quickmenu.vim' " Quick Menu to show keymaps
 call plug#end()
 
 " ---------------------------------------------------------------------------- "
@@ -120,6 +121,7 @@ map <F9> :GitGutterToggle<CR>
 " F10:
 " F11:
 " F12:
+noremap <silent><F12> :call quickmenu#toggle(0)<cr>
 " ---------------------------------------------------------------------------- "
 
 " -------------------------------- Plugin Settings --------------------------- "
@@ -186,6 +188,22 @@ let g:syntastic_auto_loc_list=1
 " Tagbar
 let g:tagbar_autoclose = 1
 let g:tagbar_autofocus = 1
+
+" Quickmenu
+let g:quickmenu_options = "HL"
+call g:quickmenu#reset()
+" new section
+call quickmenu#append("# Appearance", '')
+" use fugitive to show diff
+call quickmenu#append("Toggle background", 'Invbg', "Toggle between dark and light background")
+call quickmenu#append("Turn paste %{&paste? 'off':'on'}", "set paste!", "enable/disable paste mode (:set paste!)")
+call quickmenu#append("Turn cursorline %{&cursorline? 'off':'on'}", "set cursorline!", "enable/disable cursorline (:set cursorline!)")
+call quickmenu#append("Turn cursorcolumn %{&cursorcolumn? 'off':'on'}", "set cursorcolumn!", "enable/disable cursorcolumn (:set cursorcolumn!)")
+call quickmenu#append("Turn wrap %{&wrap? 'off':'on'}", "set wrap!", "enable/disable wrap mode (:set wrap!)")
+call quickmenu#append("Turn number %{&number? 'off':'on'}", "set number!", "enable/disable number mode (:set number!)")
+" new section
+call quickmenu#append("# Misc", '')
+call quickmenu#append("Turn paste %{&paste? 'off':'on'}", "set paste!", "enable/disable paste mode (:set paste!)")
 
 " Startify
 let g:startify_bookmarks = [ {'vimrc': '~/.vimrc'}, {'bashrc': '~/.bashrc'} ]
@@ -352,7 +370,7 @@ nmap <leader>N :set wrap!<CR>
 " Toggle Scrollbind
 nmap <leader>D :set scb!<CR>
 " Toggle line numbers
-nmap <leader>l :setlocal number!<CR>
+nmap <leader>l :set number!<CR>
 " Toggle diff mode
 nmap <leader>d :windo set diff!<CR>
 " Toggle paste mode
