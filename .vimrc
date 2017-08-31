@@ -70,6 +70,7 @@ Plug 'vim-scripts/LineJuggler' | Plug 'vim-scripts/ingo-library' | Plug 'vim-scr
 Plug 'vim-scripts/Mark--Karkat' " Allows to highlight multiple words simultaneously
 Plug 'majutsushi/tagbar' " Tagbar, requires exuberant-ctags
 Plug 'skywind3000/quickmenu.vim' " Quick Menu to show keymaps
+Plug 'will133/vim-dirdiff' " Recusively compare direcotires
 call plug#end()
 
 " ---------------------------------------------------------------------------- "
