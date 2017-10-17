@@ -71,6 +71,7 @@ Plug 'vim-scripts/Mark--Karkat' " Allows to highlight multiple words simultaneou
 Plug 'majutsushi/tagbar' " Tagbar, requires exuberant-ctags
 Plug 'skywind3000/quickmenu.vim' " Quick Menu to show keymaps
 Plug 'will133/vim-dirdiff' " Recusively compare direcotires
+Plug 'martinda/Jenkinsfile-vim-syntax' " Syntax for Jenkinsfile
 call plug#end()
 
 " ---------------------------------------------------------------------------- "
