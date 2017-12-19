@@ -71,6 +71,7 @@ Plug 'vim-scripts/Mark--Karkat' " Allows to highlight multiple words simultaneou
 Plug 'majutsushi/tagbar' " Tagbar, requires exuberant-ctags
 Plug 'will133/vim-dirdiff' " Recusively compare direcotires
 Plug 'martinda/Jenkinsfile-vim-syntax' " Syntax for Jenkinsfile
+Plug 'avakhov/vim-yaml' " Yaml Syntax
 call plug#end()
 
 " ---------------------------------------------------------------------------- "
