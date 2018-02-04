@@ -370,6 +370,9 @@ nnoremap <expr> n  'Nn'[v:searchforward]
 nnoremap <expr> N  'nN'[v:searchforward]
 " Quickly edit your macros
 " nnoremap <leader>Q  :<c-u><c-r>='let @'. v:register .' = '. string(getreg(v:register))<cr><c-f><left>
+" Simplify merging and diffing
+map ] ]c
+map [ [c
 " ---------------------------------------------------------------------------- "
 
 " ------------------------------- Color Fun ---------------------------------- "
