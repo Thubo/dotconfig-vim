@@ -72,6 +72,8 @@ Plug 'majutsushi/tagbar' " Tagbar, requires exuberant-ctags
 Plug 'will133/vim-dirdiff' " Recusively compare direcotires
 Plug 'martinda/Jenkinsfile-vim-syntax' " Syntax for Jenkinsfile
 Plug 'avakhov/vim-yaml' " Yaml Syntax
+Plug '/usr/local/opt/fzf' " Use FZF via Homebrew
+Plug 'junegunn/fzf.vim' " Enable FZF VIM plugin
 call plug#end()
 
 " ---------------------------------------------------------------------------- "
@@ -86,9 +88,6 @@ call plug#end()
 
 " Mercurial wrapper for vim
 " ludovicchabant/vim-lawrencium
-
-" Open files with ease
-" kien/ctrlp.vim
 
 " Align stuff
 " junegunn/vim-easy-align
@@ -126,6 +125,21 @@ map <F9> :GitGutterToggle<CR>
 " ---------------------------------------------------------------------------- "
 
 " -------------------------------- Plugin Settings --------------------------- "
+" FZF
+" Default layout
+let g:fzf_layout = { 'down': '~50%' }
+" Augmenting Ag command using fzf#vim#with_preview function
+"   :Ag  - Start fzf with hidden preview window that can be enabled with "?" key
+"   :Ag! - Start fzf in fullscreen and display the preview window above
+command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>,
+  \                 <bang>0 ? fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'up:60%')
+  \                         : fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%:hidden', '?'),
+  \                 <bang>0)
+
+" Provide a command for raw Ag searches
+command! -bang -nargs=* AgR call fzf#vim#ag_raw(<q-args>)
+
 " Org Mode
 let g:org_agenda_files = ['~/org/*.org']
 let g:org_heading_shade_leading_stars = 0
