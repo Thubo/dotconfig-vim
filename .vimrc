@@ -32,48 +32,45 @@ call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'morhetz/gruvbox'
 " Plugins
-Plug 'ekalinin/Dockerfile.vim' " Syntax Highlighting for Dockerfiles
+" Plug '/usr/local/opt/fzf' " Use FZF via Homebrew
+" Plug 'airblade/vim-gitgutter' " Inline Git Diff
+" Plug 'garbas/vim-snipmate' | Plug 'MarcWeber/vim-addon-mw-utils' " Snippets
+" Plug 'inside/vim-search-pulse' " Highlight line after search
+" Plug 'jceb/vim-orgmode' | Plug 'tpope/vim-speeddating' | Plug 'vim-scripts/utl.vim' | Plug 'tpope/vim-repeat' " Org Mode
+" Plug 'junegunn/fzf.vim' " Enable FZF VIM plugin
+" Plug 'mtth/scratch.vim' " Scratchpad with gs
 Plug 'AndrewRadev/linediff.vim' " Use :Linediff to diff lines marked before
 Plug 'Lokaltog/vim-easymotion' " Easy motion, invoced by using 's'
 Plug 'Raimondi/delimitMate' " Close brackets, quotes, etc
-Plug 'airblade/vim-gitgutter' " Inline Git Diff
+Plug 'avakhov/vim-yaml' " Yaml Syntax
 Plug 'bling/vim-airline' " Lightweight status line
 Plug 'bronson/vim-trailing-whitespace' " Trailing Whitespaces
 Plug 'conradirwin/vim-bracketed-paste' " Bracketed Paste
+Plug 'ekalinin/Dockerfile.vim' " Syntax Highlighting for Dockerfiles
 Plug 'ervandew/supertab' | Plug 'vim-scripts/tlib' " Tab completion for everything
-Plug 'garbas/vim-snipmate' | Plug 'MarcWeber/vim-addon-mw-utils' " Snippets
 Plug 'godlygeek/tabular' " Manage your alignments
 Plug 'honza/vim-snippets' " Install a bunch of predefined snippets
-Plug 'jceb/vim-orgmode' | Plug 'tpope/vim-speeddating' | Plug 'vim-scripts/utl.vim' | Plug 'tpope/vim-repeat' " Org Mode
 Plug 'jlanzarotta/bufexplorer' " Buffer explorer
-Plug 'fatih/vim-nginx' " Nginx Syntax
-" The default mapping for toggling buffer explorer is <leader>bt
-" open in vertical split: <leader>bv
-" open in horizontal split: <leader>bs
 Plug 'kshenoy/vim-signature' " Pluggin to toggle marks using 'm' and a mark letter
+Plug 'majutsushi/tagbar' " Tagbar, requires exuberant-ctags
+Plug 'martinda/Jenkinsfile-vim-syntax' " Syntax for Jenkinsfile
+Plug 'mattn/emmet-vim' " Essential toolkit for web-developers
 Plug 'mhinz/vim-startify' " Startify
-Plug 'mustache/vim-mustache-handlebars' " Mustache and Handlebars (Kubernetes Charts)
 Plug 'mileszs/ack.vim' " Ack Vim
-Plug 'mtth/scratch.vim' " Scratchpad with gs
+Plug 'mustache/vim-mustache-handlebars' " Mustache and Handlebars (Kubernetes Charts)
 Plug 'nathanaelkane/vim-indent-guides' " Optical help for intentation - Default mapping for toggling is <Leader>ig
 Plug 'plasticboy/vim-markdown' " Markdown syntax
 Plug 'rodjek/vim-puppet' " Puppet
-Plug 'mattn/emmet-vim' " Essential toolkit for web-developers
 Plug 'scrooloose/syntastic' " Syntax checking
 Plug 'tomtom/tcomment_vim' " Quickly comment and uncomment lines
 Plug 'tpope/vim-fugitive' " Vim git warpper, http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/
-Plug 'tpope/vim-vinegar' " Vinear
+Plug 'tpope/vim-vinegar' " Explore and modify your filesystem
 Plug 'vim-ruby/vim-ruby' " Vim Ruby
 Plug 'vim-scripts/Align' " Align stuff
 Plug 'vim-scripts/Gundo' " Graphical undo
 Plug 'vim-scripts/LineJuggler' | Plug 'vim-scripts/ingo-library' | Plug 'vim-scripts/visualrepeat' " LineJuggler
 Plug 'vim-scripts/Mark--Karkat' " Allows to highlight multiple words simultaneously
-Plug 'majutsushi/tagbar' " Tagbar, requires exuberant-ctags
 Plug 'will133/vim-dirdiff' " Recusively compare direcotires
-Plug 'martinda/Jenkinsfile-vim-syntax' " Syntax for Jenkinsfile
-Plug 'avakhov/vim-yaml' " Yaml Syntax
-Plug '/usr/local/opt/fzf' " Use FZF via Homebrew
-Plug 'junegunn/fzf.vim' " Enable FZF VIM plugin
 call plug#end()
 
 " ---------------------------------------------------------------------------- "
@@ -363,7 +360,7 @@ nmap <Leader>ff :call <SID>ToggleFold()<CR>
 " Toggle Background Color
 noremap <F10> :Invbg<CR>
 " Toggle between line or column highlight
-nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+" nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 " Toggle line wraping
 nmap <leader>N :set wrap!<CR>
 " Toggle Scrollbind
@@ -401,7 +398,7 @@ function! SetupSolarized()
   let g:solarized_contrast="high"
   let g:solarized_visibility="high"
   " highlight current line
-  set cursorline
+  " set cursorline
   hi CursorLine term=bold cterm=bold ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
   hi CursorColumn term=bold cterm=bold ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
 endfunction
@@ -413,7 +410,7 @@ function! SetupGruvbox()
   " Use the solarized color scheme
   colorscheme gruvbox
   " highlight current line
-  set cursorline
+  " set cursorline
   hi CursorLine term=bold cterm=bold ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
   hi CursorColumn term=bold cterm=bold ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
 endfunction
