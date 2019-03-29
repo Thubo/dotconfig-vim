@@ -45,6 +45,7 @@ Plug 'Raimondi/delimitMate' " Close brackets, quotes, etc
 Plug 'avakhov/vim-yaml' " Yaml Syntax
 Plug 'bling/vim-airline' " Lightweight status line
 Plug 'bronson/vim-trailing-whitespace' " Trailing Whitespaces
+Plug 'ctrlpvim/ctrlp.vim' " Search files quickly
 Plug 'conradirwin/vim-bracketed-paste' " Bracketed Paste
 Plug 'ekalinin/Dockerfile.vim' " Syntax Highlighting for Dockerfiles
 Plug 'ervandew/supertab' | Plug 'vim-scripts/tlib' " Tab completion for everything
@@ -156,6 +157,9 @@ set diffopt+=vertical
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
+
+" CtrlP
+nnoremap <leader>b :CtrlPBuffer<CR>
 
 " Vim Ack
 if executable('ag')
