@@ -32,13 +32,13 @@ call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'morhetz/gruvbox'
 " Plugins
-" Plug '/usr/local/opt/fzf' " Use FZF via Homebrew
 " Plug 'airblade/vim-gitgutter' " Inline Git Diff
 " Plug 'garbas/vim-snipmate' | Plug 'MarcWeber/vim-addon-mw-utils' " Snippets
 " Plug 'inside/vim-search-pulse' " Highlight line after search
 " Plug 'jceb/vim-orgmode' | Plug 'tpope/vim-speeddating' | Plug 'vim-scripts/utl.vim' | Plug 'tpope/vim-repeat' " Org Mode
-" Plug 'junegunn/fzf.vim' " Enable FZF VIM plugin
 " Plug 'mtth/scratch.vim' " Scratchpad with gs
+Plug 'junegunn/fzf' " Enable FZF VIM plugin
+Plug 'junegunn/fzf.vim' " Enable FZF VIM plugin
 Plug 'AndrewRadev/linediff.vim' " Use :Linediff to diff lines marked before
 Plug 'Lokaltog/vim-easymotion' " Easy motion, invoced by using 's'
 Plug 'Raimondi/delimitMate' " Close brackets, quotes, etc
@@ -134,9 +134,6 @@ command! -bang -nargs=* Ag
   \                 <bang>0 ? fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'up:60%')
   \                         : fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%:hidden', '?'),
   \                 <bang>0)
-
-" Provide a command for raw Ag searches
-command! -bang -nargs=* AgR call fzf#vim#ag_raw(<q-args>)
 
 " Org Mode
 let g:org_agenda_files = ['~/org/*.org']
