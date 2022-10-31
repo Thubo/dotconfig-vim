@@ -48,7 +48,7 @@ Plug 'bronson/vim-trailing-whitespace' " Trailing Whitespaces
 Plug 'ctrlpvim/ctrlp.vim' " Search files quickly
 Plug 'conradirwin/vim-bracketed-paste' " Bracketed Paste
 Plug 'ekalinin/Dockerfile.vim' " Syntax Highlighting for Dockerfiles
-Plug 'ervandew/supertab' | Plug 'vim-scripts/tlib' " Tab completion for everything
+Plug 'ervandew/supertab' | Plug 'tomtom/tlib_vim' " Tab completion for everything
 Plug 'godlygeek/tabular' " Manage your alignments
 Plug 'honza/vim-snippets' " Install a bunch of predefined snippets
 Plug 'jlanzarotta/bufexplorer' " Buffer explorer
