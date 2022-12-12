@@ -301,6 +301,8 @@ set scrolloff=3
 set autoindent
 " Show vim-powerline
 set laststatus=2
+" Clear terminal after closing vim
+au VimLeave * :!clear
 " ---------------------------------------------------------------------------- "
 
 " --------------------------- Folding & Functions ---------------------------- "
