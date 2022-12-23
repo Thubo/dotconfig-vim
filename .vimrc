@@ -50,6 +50,7 @@ Plug 'conradirwin/vim-bracketed-paste' " Bracketed Paste
 Plug 'ekalinin/Dockerfile.vim' " Syntax Highlighting for Dockerfiles
 Plug 'ervandew/supertab' | Plug 'tomtom/tlib_vim' " Tab completion for everything
 Plug 'godlygeek/tabular' " Manage your alignments
+Plug 'hashivim/vim-terraform' " Terraform
 Plug 'honza/vim-snippets' " Install a bunch of predefined snippets
 Plug 'jlanzarotta/bufexplorer' " Buffer explorer
 Plug 'kshenoy/vim-signature' " Pluggin to toggle marks using 'm' and a mark letter
