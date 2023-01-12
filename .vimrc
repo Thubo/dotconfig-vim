@@ -68,7 +68,7 @@ Plug 'tomtom/tcomment_vim' " Quickly comment and uncomment lines
 Plug 'tpope/vim-fugitive' " Vim git warpper, http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/
 Plug 'tpope/vim-vinegar' " Explore and modify your filesystem
 Plug 'vim-ruby/vim-ruby' " Vim Ruby
-Plug 'vim-scripts/Align' " Align stuff
+Plug 'junegunn/vim-easy-align' " EasyAlign
 Plug 'vim-scripts/Gundo' " Graphical undo
 Plug 'vim-scripts/LineJuggler' | Plug 'vim-scripts/ingo-library' | Plug 'vim-scripts/visualrepeat' " LineJuggler
 Plug 'vim-scripts/Mark--Karkat' " Allows to highlight multiple words simultaneously
