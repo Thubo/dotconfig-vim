@@ -37,22 +37,24 @@ Plug 'morhetz/gruvbox'
 " Plug 'inside/vim-search-pulse' " Highlight line after search
 " Plug 'jceb/vim-orgmode' | Plug 'tpope/vim-speeddating' | Plug 'vim-scripts/utl.vim' | Plug 'tpope/vim-repeat' " Org Mode
 " Plug 'mtth/scratch.vim' " Scratchpad with gs
-Plug 'junegunn/fzf' " Enable FZF VIM plugin
-Plug 'junegunn/fzf.vim' " Enable FZF VIM plugin
 Plug 'AndrewRadev/linediff.vim' " Use :Linediff to diff lines marked before
 Plug 'Lokaltog/vim-easymotion' " Easy motion, invoced by using 's'
 Plug 'Raimondi/delimitMate' " Close brackets, quotes, etc
 Plug 'avakhov/vim-yaml' " Yaml Syntax
 Plug 'bling/vim-airline' " Lightweight status line
 Plug 'bronson/vim-trailing-whitespace' " Trailing Whitespaces
-Plug 'ctrlpvim/ctrlp.vim' " Search files quickly
 Plug 'conradirwin/vim-bracketed-paste' " Bracketed Paste
+Plug 'ctrlpvim/ctrlp.vim' " Search files quickly
 Plug 'ekalinin/Dockerfile.vim' " Syntax Highlighting for Dockerfiles
 Plug 'ervandew/supertab' | Plug 'tomtom/tlib_vim' " Tab completion for everything
 Plug 'godlygeek/tabular' " Manage your alignments
 Plug 'hashivim/vim-terraform' " Terraform
 Plug 'honza/vim-snippets' " Install a bunch of predefined snippets
+Plug 'inkarkat/vim-AdvancedSorters' " Sort blocks of text
+Plug 'inkarkat/vim-ingo-library' " Library for AdvancedSorters
 Plug 'jlanzarotta/bufexplorer' " Buffer explorer
+Plug 'junegunn/fzf.vim' " Enable FZF VIM plugin
+Plug 'junegunn/vim-easy-align' " EasyAlign
 Plug 'kshenoy/vim-signature' " Pluggin to toggle marks using 'm' and a mark letter
 Plug 'majutsushi/tagbar' " Tagbar, requires exuberant-ctags
 Plug 'martinda/Jenkinsfile-vim-syntax' " Syntax for Jenkinsfile
@@ -68,7 +70,6 @@ Plug 'tomtom/tcomment_vim' " Quickly comment and uncomment lines
 Plug 'tpope/vim-fugitive' " Vim git warpper, http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/
 Plug 'tpope/vim-vinegar' " Explore and modify your filesystem
 Plug 'vim-ruby/vim-ruby' " Vim Ruby
-Plug 'junegunn/vim-easy-align' " EasyAlign
 Plug 'vim-scripts/Gundo' " Graphical undo
 Plug 'vim-scripts/LineJuggler' | Plug 'vim-scripts/ingo-library' | Plug 'vim-scripts/visualrepeat' " LineJuggler
 Plug 'vim-scripts/Mark--Karkat' " Allows to highlight multiple words simultaneously
