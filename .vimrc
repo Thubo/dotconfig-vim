@@ -52,6 +52,7 @@ Plug 'hashivim/vim-terraform' " Terraform
 Plug 'honza/vim-snippets' " Install a bunch of predefined snippets
 Plug 'inkarkat/vim-AdvancedSorters' " Sort blocks of text
 Plug 'inkarkat/vim-ingo-library' " Library for AdvancedSorters
+Plug 'itspriddle/vim-shellcheck' " ShellCheck
 Plug 'jlanzarotta/bufexplorer' " Buffer explorer
 Plug 'junegunn/fzf.vim' " Enable FZF VIM plugin
 Plug 'junegunn/vim-easy-align' " EasyAlign
