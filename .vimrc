@@ -265,6 +265,8 @@ set diffopt+=iwhite
 set diffexpr=""
 " Equalize splits automatically when window is resized
 autocmd VimResized * wincmd =
+" Make YAML usable
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 " ---------------------------------------------------------------------------- "
 
 " ------------------------------- Interface Settings ------------------------ "
